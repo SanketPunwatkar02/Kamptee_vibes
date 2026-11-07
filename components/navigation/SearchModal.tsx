@@ -41,7 +41,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
     : STORIES.slice(0, 4);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 md:pt-24 px-4 bg-black/80 backdrop-blur-md">
+    <div className="fixed inset-0 z-[60] flex items-start justify-center pt-16 md:pt-24 px-4 bg-black/80 backdrop-blur-md">
       <div className="relative w-full max-w-2xl bg-[#141414] border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header Search Bar */}
         <div className="flex items-center gap-3 px-5 py-4 border-b border-white/10">
