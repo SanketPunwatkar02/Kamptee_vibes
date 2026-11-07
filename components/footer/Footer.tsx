@@ -7,76 +7,76 @@ import { SITE_CONFIG } from '@/lib/seo';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-[#0d0d0d] border-t border-white/10 pt-16 pb-12 overflow-hidden">
-      {/* Decorative Bottom Mandala Arc matching reference board */}
-      <div className="absolute right-0 bottom-0 pointer-events-none opacity-40 translate-x-12 translate-y-8 select-none">
+    <footer className="relative bg-[#0d0d0d] border-t border-white/10 pt-12 sm:pt-16 pb-10 overflow-hidden">
+      {/* Decorative Bottom Mandala Arc */}
+      <div className="absolute right-0 bottom-0 pointer-events-none opacity-30 translate-x-12 translate-y-8 select-none">
         <Image
           src="/images/mandala_arc.svg"
           alt="Mandala motif artwork"
-          width={450}
-          height={225}
+          width={400}
+          height={200}
           className="object-contain"
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-10 border-b border-white/10">
           
           {/* Brand Col (5 cols) */}
-          <div className="lg:col-span-5 space-y-5">
-            <BrandLogo size="lg" showTagline={true} />
+          <div className="lg:col-span-5 space-y-4">
+            <BrandLogo size="md" showTagline={true} />
 
-            <p className="text-xs sm:text-sm text-neutral-400 font-sans leading-relaxed max-w-sm">
-              An independent digital media publication chronicling the culture, stories, heritage, and people of Kamptee.
+            <p className="text-xs text-neutral-400 font-sans leading-relaxed max-w-sm">
+              Independent digital publication chronicling local news, culture, and community stories in Kamptee.
             </p>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center gap-2.5 pt-1">
               <a
                 href={SITE_CONFIG.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 hover:bg-accent-pink text-white flex items-center justify-center transition-all duration-300 border border-white/10"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-accent-pink text-white flex items-center justify-center transition-all duration-300 border border-white/10"
                 aria-label="Instagram"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-3.5 h-3.5" />
               </a>
               <a
                 href={SITE_CONFIG.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 hover:bg-red-600 text-white flex items-center justify-center transition-all duration-300 border border-white/10"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-red-600 text-white flex items-center justify-center transition-all duration-300 border border-white/10"
                 aria-label="YouTube"
               >
-                <Youtube className="w-4 h-4" />
+                <Youtube className="w-3.5 h-3.5" />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 hover:bg-white hover:text-black text-white flex items-center justify-center transition-all duration-300 border border-white/10"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white hover:text-black text-white flex items-center justify-center transition-all duration-300 border border-white/10"
                 aria-label="Twitter / X"
               >
-                <Twitter className="w-4 h-4" />
+                <Twitter className="w-3.5 h-3.5" />
               </a>
               <a
                 href={SITE_CONFIG.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#25D366] hover:text-black text-white flex items-center justify-center transition-all duration-300 border border-white/10"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#25D366] hover:text-black text-white flex items-center justify-center transition-all duration-300 border border-white/10"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>
 
-          {/* Quick Navigation Links (3 cols) */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-widest text-white/90">
-              Publication Index
+          {/* Essential Navigation (3 cols) */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-[11px] font-mono uppercase tracking-widest text-white/90">
+              Navigation
             </h4>
-            <ul className="space-y-2.5 text-xs font-mono">
+            <ul className="space-y-2 text-xs font-mono">
               <li>
                 <Link href="/" className="text-primary-muted hover:text-accent-pink transition-colors">
                   HOME
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link href="/stories" className="text-primary-muted hover:text-accent-pink transition-colors">
-                  STORIES & DISPATCHES
+                  STORIES & ARCHIVE
                 </Link>
               </li>
               <li>
@@ -94,28 +94,28 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link href="/about" className="text-primary-muted hover:text-accent-pink transition-colors">
-                  ABOUT KAMPTEE VIBEZ
+                  ABOUT
                 </Link>
               </li>
               <li>
                 <Link href="/collaborate" className="text-primary-muted hover:text-accent-pink transition-colors">
-                  COLLABORATE & ADVERTISE
+                  COLLABORATE
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-primary-muted hover:text-accent-pink transition-colors">
-                  CONTACT & NEWS TIPS
+                  CONTACT
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Editorial Categories (2 cols) */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-widest text-white/90">
+          {/* Coverage Beats (2 cols) */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-[11px] font-mono uppercase tracking-widest text-white/90">
               Coverage Beats
             </h4>
-            <ul className="space-y-2 text-xs font-mono text-primary-muted">
+            <ul className="space-y-1.5 text-xs font-mono text-primary-muted">
               <li>
                 <Link href="/stories?category=Culture" className="hover:text-white transition-colors">
                   CULTURE
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link href="/stories?category=Food" className="hover:text-white transition-colors">
-                  FOOD & BITES
+                  FOOD
                 </Link>
               </li>
               <li>
@@ -141,38 +141,33 @@ export const Footer: React.FC = () => {
                   LIFESTYLE
                 </Link>
               </li>
-              <li>
-                <Link href="/stories?category=Public%20Alerts" className="hover:text-white transition-colors">
-                  PUBLIC ALERTS
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Contact & Location (2 cols) */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-widest text-white/90">
-              Location
+          {/* Verified Contact Details (2 cols) */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-[11px] font-mono uppercase tracking-widest text-white/90">
+              Editorial Desk
             </h4>
-            <div className="space-y-3 text-xs text-neutral-400 font-sans">
-              <div className="flex items-start gap-2">
+            <div className="space-y-2 text-xs text-neutral-400 font-sans">
+              <div className="flex items-start gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-accent-pink flex-shrink-0 mt-0.5" />
-                <span>Kamptee, Nagpur District, Maharashtra, 441001</span>
+                <span>Kamptee, Maharashtra, 441001</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5 text-accent-orange flex-shrink-0" />
                 <span className="font-mono text-[11px]">editorial@kampteevibez.com</span>
               </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-1">
               <a
                 href={SITE_CONFIG.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-mono uppercase text-[#25D366] hover:underline"
+                className="inline-flex items-center gap-1 text-[11px] font-mono uppercase text-[#25D366] hover:underline"
               >
-                <span>Instant News Tip</span>
+                <span>News Tip Line</span>
                 <ArrowUpRight className="w-3 h-3" />
               </a>
             </div>
@@ -181,13 +176,13 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright & Tagline */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-primary-muted">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-primary-muted">
           <div>
             &copy; {new Date().getFullYear()} Kamptee Vibez. All rights reserved.
           </div>
 
           <div className="text-center sm:text-right text-primary-subtle">
-            The new story which matters. • Designed with Experimental Brutalism.
+            &ldquo;The new story which matters.&rdquo;
           </div>
         </div>
 
