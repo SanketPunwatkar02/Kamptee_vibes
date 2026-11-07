@@ -17,7 +17,7 @@ export const ReelsSection: React.FC = () => {
           <div>
             <div className="text-[11px] font-mono tracking-widest text-accent-pink uppercase mb-1 flex items-center gap-2">
               <Instagram className="w-3.5 h-3.5 text-accent-pink" />
-              <span>@KAMPTEE_VIBEZZZ</span>
+              <span>@KAMPTEE_VIBEZZ</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display uppercase tracking-tight text-white leading-none">
               Featured Reels

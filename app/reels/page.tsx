@@ -8,7 +8,7 @@ import { SITE_CONFIG } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Instagram Reels & Video Dispatches',
   description:
-    'Watch trending vertical video stories, festival celebrations, street food tours, and community moments from @kamptee_vibezzz.',
+    'Watch trending vertical video stories, festival celebrations, street food tours, and community moments from @kamptee_vibezz.',
   alternates: {
     canonical: '/reels',
   },
@@ -24,7 +24,7 @@ export default function ReelsPage() {
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-accent-pink mb-2">
               <Instagram className="w-3.5 h-3.5" />
-              <span>OFFICIAL FEED • @KAMPTEE_VIBEZZZ</span>
+              <span>OFFICIAL FEED • @KAMPTEE_VIBEZZ</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display uppercase tracking-tight text-white leading-tight">
               Reels & Video Dispatches
@@ -40,7 +40,7 @@ export default function ReelsPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent-pink text-white font-semibold text-xs font-mono uppercase tracking-wider hover:bg-[#d91370] transition-colors shadow-glow-pink whitespace-nowrap"
           >
-            <span>Follow @kamptee_vibezzz</span>
+            <span>Follow @kamptee_vibezz</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>

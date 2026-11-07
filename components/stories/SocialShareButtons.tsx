@@ -27,7 +27,7 @@ export const SocialShareButtons: React.FC<SocialShareButtonsProps> = ({ url, tit
 
   const twitterShare = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     title
-  )}&url=${encodeURIComponent(url)}&via=kamptee_vibezzz`;
+  )}&url=${encodeURIComponent(url)}&via=kamptee_vibezz`;
 
   const facebookShare = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
 
