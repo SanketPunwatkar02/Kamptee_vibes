@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Instagram, Volume2, VolumeX } from 'lucide-react';
 import { SITE_CONFIG } from '@/lib/seo';
+import { Mandala3D } from '@/components/hero/Mandala3D';
 
 interface Slide {
   id: string;
@@ -58,7 +59,7 @@ export const Hero: React.FC = () => {
 
   const activeSlide = HERO_SLIDES[activeSlideIndex];
 
-  // Optional auto-rotation every 7 seconds
+  // Auto-rotation every 7 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveSlideIndex((prev) => (prev + 1) % HERO_SLIDES.length);
@@ -85,22 +86,21 @@ export const Hero: React.FC = () => {
           const ctx = new AudioCtx();
           audioContextRef.current = ctx;
 
-          // Warm harmonic drone (Kanhan river dusk ambiance simulation)
           const osc1 = ctx.createOscillator();
           const osc2 = ctx.createOscillator();
           const filter = ctx.createBiquadFilter();
           const gain = ctx.createGain();
 
           osc1.type = 'sine';
-          osc1.frequency.setValueAtTime(110, ctx.currentTime); // A2 warm drone
+          osc1.frequency.setValueAtTime(110, ctx.currentTime);
           osc2.type = 'triangle';
-          osc2.frequency.setValueAtTime(164.81, ctx.currentTime); // E3 perfect fifth
+          osc2.frequency.setValueAtTime(164.81, ctx.currentTime);
 
           filter.type = 'lowpass';
           filter.frequency.setValueAtTime(450, ctx.currentTime);
 
           gain.gain.setValueAtTime(0.0001, ctx.currentTime);
-          gain.gain.linearRampToValueAtTime(0.04, ctx.currentTime + 1.2); // Gentle volume
+          gain.gain.linearRampToValueAtTime(0.04, ctx.currentTime + 1.2);
 
           osc1.connect(filter);
           osc2.connect(filter);
@@ -135,66 +135,74 @@ export const Hero: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column: Experimental Editorial Headlines & CTAs */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Small Editorial Metadata */}
-            <div className="flex items-center gap-3 mb-4">
-              <span className="flex h-2 w-2 rounded-full bg-accent-pink animate-pulse" />
-              <span className="text-[11px] font-mono tracking-widest text-primary-muted uppercase">
-                DIGITAL MEDIA • EST. 2024 • KAMPTEE, MH
-              </span>
-            </div>
+          {/* Left Column: 3D Rotating Mandala + Experimental Editorial Headlines */}
+          <div className="lg:col-span-7 flex flex-col justify-center relative">
+            
+            {/* 3D Rotating Mandala behind the Hero Text */}
+            <Mandala3D className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] md:w-[580px] md:h-[580px] lg:w-[640px] lg:h-[640px] opacity-75 sm:opacity-85" />
 
-            {/* Oversized Condensed Headline */}
-            <h1 className="font-display uppercase text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] xl:text-[7.5rem] tracking-tight text-white leading-[0.88] mb-6">
-              THE CITY
-              <br />
-              HAS A
-              <br />
-              <span className="text-white">
-                STORY
-                <span className="text-accent-pink inline-block animate-bounce ml-1">.</span>
-              </span>
-            </h1>
-
-            {/* Supporting Copy */}
-            <p className="text-lg sm:text-xl md:text-2xl text-neutral-300 font-sans font-light tracking-wide max-w-lg mb-8 leading-relaxed">
-              Your city. Your people. Your stories.
-            </p>
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
-              <Link
-                href="/stories"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold tracking-wider uppercase text-white bg-accent-pink hover:bg-[#d91370] transition-all duration-300 shadow-glow-pink group"
-              >
-                <span>Explore Latest</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-
-              <a
-                href={SITE_CONFIG.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-sm font-medium tracking-wide text-neutral-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
-              >
-                <Instagram className="w-4 h-4 text-accent-pink" />
-                <span>@kamptee_vibezzz</span>
-              </a>
-            </div>
-
-            {/* Editorial Micro-Bar */}
-            <div className="mt-12 pt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono text-primary-muted">
-              <div>
-                <span className="text-white font-semibold">21.2234° N, 79.1983° E</span>
-                <span className="mx-2 opacity-40">•</span>
-                <span>KANHAN BASIN</span>
+            {/* Content sitting directly on top */}
+            <div className="relative z-10">
+              {/* Small Editorial Metadata */}
+              <div className="flex items-center gap-3 mb-4">
+                <span className="flex h-2 w-2 rounded-full bg-accent-pink animate-pulse" />
+                <span className="text-[11px] font-mono tracking-widest text-primary-muted uppercase">
+                  DIGITAL MEDIA • EST. 2024 • KAMPTEE, MH
+                </span>
               </div>
-              <div className="hidden sm:flex items-center gap-2 text-primary-subtle">
-                <span>SCROLL TO DISCOVER</span>
-                <span className="animate-pulse">&darr;</span>
+
+              {/* Oversized Condensed Headline */}
+              <h1 className="font-display uppercase text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] xl:text-[7.5rem] tracking-tight text-white leading-[0.88] mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">
+                THE CITY
+                <br />
+                HAS A
+                <br />
+                <span className="text-white">
+                  STORY
+                  <span className="text-accent-pink inline-block animate-bounce ml-1">.</span>
+                </span>
+              </h1>
+
+              {/* Supporting Copy */}
+              <p className="text-lg sm:text-xl md:text-2xl text-neutral-300 font-sans font-light tracking-wide max-w-lg mb-8 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                Your city. Your people. Your stories.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/stories"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold tracking-wider uppercase text-white bg-accent-pink hover:bg-[#d91370] transition-all duration-300 shadow-glow-pink group"
+                >
+                  <span>Explore Latest</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+
+                <a
+                  href={SITE_CONFIG.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-sm font-medium tracking-wide text-neutral-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors backdrop-blur-sm"
+                >
+                  <Instagram className="w-4 h-4 text-accent-pink" />
+                  <span>@kamptee_vibezzz</span>
+                </a>
+              </div>
+
+              {/* Editorial Micro-Bar */}
+              <div className="mt-12 pt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono text-primary-muted">
+                <div>
+                  <span className="text-white font-semibold">21.2234° N, 79.1983° E</span>
+                  <span className="mx-2 opacity-40">•</span>
+                  <span>KANHAN BASIN</span>
+                </div>
+                <div className="hidden sm:flex items-center gap-2 text-primary-subtle">
+                  <span>SCROLL TO DISCOVER</span>
+                  <span className="animate-pulse">&darr;</span>
+                </div>
               </div>
             </div>
+
           </div>
 
           {/* Right Column: Hero Visual Artwork with Vertical Outline Typography */}

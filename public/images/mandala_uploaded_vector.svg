@@ -1,0 +1,146 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Core radial glow -->
+    <radialGradient id="coreLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#FFD166"/>
+      <stop offset="50%" stop-color="#FF9D00"/>
+      <stop offset="75%" stop-color="#F72585"/>
+      <stop offset="100%" stop-color="#2B001F" stop-opacity="0.9"/>
+    </radialGradient>
+
+    <!-- Outer aura gradient -->
+    <radialGradient id="outerAura" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#F72585" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#F72585" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FF9D00" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Petal gradients -->
+    <linearGradient id="pinkPetalGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#B5179E"/>
+      <stop offset="40%" stop-color="#F72585"/>
+      <stop offset="85%" stop-color="#FF5DA2"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <linearGradient id="orangeRayGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#7209B7"/>
+      <stop offset="30%" stop-color="#E85D04"/>
+      <stop offset="75%" stop-color="#FF9D00"/>
+      <stop offset="100%" stop-color="#FFE49E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Outer Glow Circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#outerAura)"/>
+  <circle cx="200" cy="200" r="172" stroke="#F72585" stroke-opacity="0.4" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="160" stroke="#FF9D00" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="3 5"/>
+
+  <!-- Tier 1: Outer 32 Radiant Golden and Pink Beads -->
+  <circle cx="368.00" cy="200.00" r="3" fill="#FFD166"/>
+  <circle cx="364.77" cy="232.78" r="2" fill="#F72585"/>
+  <circle cx="355.21" cy="264.29" r="3" fill="#FFD166"/>
+  <circle cx="339.69" cy="293.34" r="2" fill="#F72585"/>
+  <circle cx="318.79" cy="318.79" r="3" fill="#FFD166"/>
+  <circle cx="293.34" cy="339.69" r="2" fill="#F72585"/>
+  <circle cx="264.29" cy="355.21" r="3" fill="#FFD166"/>
+  <circle cx="232.78" cy="364.77" r="2" fill="#F72585"/>
+  <circle cx="200.00" cy="368.00" r="3" fill="#FFD166"/>
+  <circle cx="167.22" cy="364.77" r="2" fill="#F72585"/>
+  <circle cx="135.71" cy="355.21" r="3" fill="#FFD166"/>
+  <circle cx="106.66" cy="339.69" r="2" fill="#F72585"/>
+  <circle cx="81.21" cy="318.79" r="3" fill="#FFD166"/>
+  <circle cx="60.31" cy="293.34" r="2" fill="#F72585"/>
+  <circle cx="44.79" cy="264.29" r="3" fill="#FFD166"/>
+  <circle cx="35.23" cy="232.78" r="2" fill="#F72585"/>
+  <circle cx="32.00" cy="200.00" r="3" fill="#FFD166"/>
+  <circle cx="35.23" cy="167.22" r="2" fill="#F72585"/>
+  <circle cx="44.79" cy="135.71" r="3" fill="#FFD166"/>
+  <circle cx="60.31" cy="106.66" r="2" fill="#F72585"/>
+  <circle cx="81.21" cy="81.21" r="3" fill="#FFD166"/>
+  <circle cx="106.66" cy="60.31" r="2" fill="#F72585"/>
+  <circle cx="135.71" cy="44.79" r="3" fill="#FFD166"/>
+  <circle cx="167.22" cy="35.23" r="2" fill="#F72585"/>
+  <circle cx="200.00" cy="32.00" r="3" fill="#FFD166"/>
+  <circle cx="232.78" cy="35.23" r="2" fill="#F72585"/>
+  <circle cx="264.29" cy="44.79" r="3" fill="#FFD166"/>
+  <circle cx="293.34" cy="60.31" r="2" fill="#F72585"/>
+  <circle cx="318.79" cy="81.21" r="3" fill="#FFD166"/>
+  <circle cx="339.69" cy="106.66" r="2" fill="#F72585"/>
+  <circle cx="355.21" cy="135.71" r="3" fill="#FFD166"/>
+  <circle cx="364.77" cy="167.22" r="2" fill="#F72585"/>
+
+  <!-- Tier 2: 16 Radiating Amber Spear Rays -->
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(11.25 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(11.25 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(33.75 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(33.75 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(56.25 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(56.25 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(78.75 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(78.75 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(101.25 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(101.25 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(123.75 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(123.75 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(146.25 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(146.25 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(168.75 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(168.75 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(191.25 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(191.25 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(213.75 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(213.75 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(236.25 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(236.25 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(258.75 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(258.75 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(281.25 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(281.25 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(303.75 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(303.75 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(326.25 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(326.25 200 200)"/>
+  <path d="M 200 48 L 207 115 L 193 115 Z" fill="url(#orangeRayGrad)" transform="rotate(348.75 200 200)"/>
+  <circle cx="200" cy="42" r="2.5" fill="#FFD166" transform="rotate(348.75 200 200)"/>
+
+  <!-- Tier 3: 16 Brilliant Magenta Lotus Petals with Luminous Tips -->
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(0.0 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(0.0 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(22.5 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(22.5 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(45.0 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(45.0 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(67.5 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(67.5 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(90.0 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(90.0 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(112.5 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(112.5 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(135.0 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(135.0 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(157.5 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(157.5 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(180.0 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(180.0 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(202.5 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(202.5 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(225.0 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(225.0 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(247.5 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(247.5 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(270.0 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(270.0 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(292.5 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(292.5 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(315.0 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(315.0 200 200)"/>
+  <path d="M 200 68 C 214 95 215 135 200 155 C 185 135 186 95 200 68 Z" fill="url(#pinkPetalGrad)" stroke="#FFE49E" stroke-width="0.8" transform="rotate(337.5 200 200)"/>
+  <circle cx="200" cy="74" r="2.5" fill="#FFFFFF" transform="rotate(337.5 200 200)"/>
+
+  <!-- Inner Ring and Glowing Sun Core -->
+  <circle cx="200" cy="200" r="52" fill="#101010" stroke="#F72585" stroke-width="2.5"/>
+  <circle cx="200" cy="200" r="42" fill="url(#coreLight)" stroke="#FFD166" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="16" fill="#FFFFFF"/>
+</svg>
