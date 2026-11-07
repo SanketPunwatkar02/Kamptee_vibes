@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[92vh] md:min-h-screen flex items-center pt-24 sm:pt-28 pb-16 overflow-hidden bg-[#101010]">
+    <section className="relative pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-12 md:pb-16 overflow-hidden bg-[#101010]">
       
       {/* 1. Thin Celestial Orbital Curved Line Arcs in the Night Sky */}
       <svg
@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Clock Tower Image */}
-          <div className="relative w-full h-[95%] sm:h-full">
+          <div className="relative w-full h-full">
             <Image
               src="/images/hero_clock_tower_seamless.png"
               alt="Kamptee Clock Tower illuminated at night during city festivities"
@@ -53,9 +53,9 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Left edge seamless gradient mask */}
-          <div className="absolute inset-y-0 left-0 w-24 sm:w-36 bg-gradient-to-r from-[#101010] via-[#101010]/60 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-20 sm:w-32 bg-gradient-to-r from-[#101010] via-[#101010]/60 to-transparent" />
           {/* Bottom seamless gradient mask */}
-          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#101010] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-12 sm:h-16 bg-gradient-to-t from-[#101010] to-transparent" />
         </div>
       </div>
 
@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
           
           {/* Foreground Typography & Call to Action */}
           <div className="relative z-10">
-            {/* The Stacked Oversized Headline */}
+            {/* The Stacked Oversized Headline - tightly positioned right below navbar */}
             <h1 className="font-display uppercase text-[3.8rem] xs:text-[4.5rem] sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] tracking-tight text-white leading-[0.86] select-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
               THE CITY
               <br />
@@ -77,18 +77,18 @@ export const Hero: React.FC = () => {
               </span>
             </h1>
 
-            {/* Exactly 2 lines of supporting copy */}
-            <p className="mt-5 sm:mt-7 text-base sm:text-xl md:text-2xl text-neutral-200 font-sans font-normal leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            {/* Tight 2 lines of supporting copy */}
+            <p className="mt-3 sm:mt-5 text-base sm:text-xl md:text-2xl text-neutral-200 font-sans font-normal leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Your city. Your people.
               <br />
               Your stories.
             </p>
 
-            {/* Hot Pink Pill CTA Button */}
-            <div className="mt-6 sm:mt-8">
+            {/* Hot Pink Pill CTA Button - positioned directly below copy */}
+            <div className="mt-4 sm:mt-6">
               <Link
                 href="/stories"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold tracking-wide text-white bg-[#F72585] hover:bg-[#d91370] transition-all duration-300 shadow-glow-pink group"
+                className="inline-flex items-center gap-2.5 px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold tracking-wide text-white bg-[#F72585] hover:bg-[#d91370] transition-all duration-300 shadow-glow-pink group"
               >
                 <span>Explore Latest</span>
                 <span className="text-lg leading-none transition-transform group-hover:translate-x-1">
