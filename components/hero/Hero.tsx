@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mandala3D } from '@/components/hero/Mandala3D';
 
 export const Hero: React.FC = () => {
   return (
@@ -15,7 +14,6 @@ export const Hero: React.FC = () => {
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        {/* Large sweeping orbits centered toward top-right */}
         <circle cx="82%" cy="25%" r="220" stroke="#FFFFFF" strokeWidth="1" fill="none" opacity="0.4" />
         <circle cx="82%" cy="25%" r="360" stroke="#FFFFFF" strokeWidth="0.8" fill="none" opacity="0.6" />
         <circle cx="82%" cy="25%" r="520" stroke="#FFFFFF" strokeWidth="0.6" fill="none" opacity="0.35" />
@@ -65,9 +63,6 @@ export const Hero: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full z-10">
         <div className="max-w-xl sm:max-w-2xl relative">
           
-          {/* 3D Rotating Mandala positioned directly behind the text */}
-          <Mandala3D className="top-1/2 left-1/3 sm:left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] md:w-[580px] md:h-[580px] lg:w-[640px] lg:h-[640px] opacity-75 sm:opacity-85" />
-
           {/* Foreground Typography & Call to Action */}
           <div className="relative z-10">
             {/* The Stacked Oversized Headline */}
